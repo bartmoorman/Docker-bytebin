@@ -1,7 +1,8 @@
 FROM bmoorman/ubuntu:bionic
 
 ARG DEBIAN_FRONTEND=noninteractive
-ARG BYTEBIN_PORT=8080
+
+ENV BYTEBIN_PORT=8080
 
 WORKDIR /config
 
@@ -23,3 +24,5 @@ VOLUME /config
 EXPOSE ${BYTEBIN_PORT}
 
 CMD ["/etc/bytebin/start.sh"]
+
+HEALTHCHECK --interval=60s --timeout=5s CMD curl --head --insecure --silent --show-error --fail "http://localhost:${BYTEBIN_PORT}/" || exit 1
