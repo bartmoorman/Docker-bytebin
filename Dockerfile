@@ -25,4 +25,4 @@ EXPOSE ${BYTEBIN_PORT}
 
 CMD ["/etc/bytebin/start.sh"]
 
-HEALTHCHECK --interval=60s --timeout=5s CMD curl --head --insecure --silent --show-error --fail "http://localhost:${BYTEBIN_PORT}/" || exit 1
+HEALTHCHECK --interval=60s --timeout=5s CMD curl --insecure --silent --show-error --fail "http://localhost:${BYTEBIN_PORT}/" || exit 1
