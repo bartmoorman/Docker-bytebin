@@ -1,7 +1,6 @@
 FROM bmoorman/ubuntu:bionic
 
 ARG DEBIAN_FRONTEND=noninteractive
-
 ENV BYTEBIN_PORT=8080
 
 WORKDIR /config
