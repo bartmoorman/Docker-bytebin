@@ -1,4 +1,4 @@
-FROM bmoorman/ubuntu:bionic
+FROM bmoorman/ubuntu:focal
 
 ARG DEBIAN_FRONTEND=noninteractive
 ENV BYTEBIN_PORT=8080
