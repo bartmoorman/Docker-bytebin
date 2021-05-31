@@ -1,13 +1,13 @@
-FROM bmoorman/ubuntu:focal
+FROM bmoorman/ubuntu:bionic
 
 ARG DEBIAN_FRONTEND=noninteractive
+
 ENV BYTEBIN_PORT=8080
 
 WORKDIR /config
 
 RUN apt-get update \
  && apt-get install --yes --no-install-recommends \
-    curl \
     jq \
     openjdk-8-jre-headless \
     wget \
