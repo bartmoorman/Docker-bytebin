@@ -8,8 +8,8 @@ WORKDIR /config
 
 RUN apt-get update \
  && apt-get install --yes --no-install-recommends \
+    default-jre-headless \
     jq \
-    openjdk-8-jre-headless \
     wget \
  && wget --quiet --directory-prefix /opt/bytebin https://ci.lucko.me/job/bytebin/lastSuccessfulBuild/artifact/target/bytebin.jar \
  && apt-get autoremove --yes --purge \
