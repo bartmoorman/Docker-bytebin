@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 $(which jq) \
 --arg host ${BYTEBIN_HOST:-0.0.0.0} \
 --argjson port ${BYTEBIN_PORT} \
