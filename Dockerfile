@@ -8,7 +8,7 @@ WORKDIR /config
 
 RUN apt-get update \
  && apt-get install --yes --no-install-recommends \
-    openjdk-17-jre-headless \
+    openjdk-21-jre-headless \
     jq \
     wget \
  && wget --quiet --directory-prefix /opt/bytebin https://ci.lucko.me/job/bytebin/lastSuccessfulBuild/artifact/target/bytebin.jar \
